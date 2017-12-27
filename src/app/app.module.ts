@@ -11,6 +11,7 @@ import { ImagessliderComponent } from './imagesslider/imagesslider.component';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
 import { FooterComponent } from './footer/footer.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { FooterComponent } from './footer/footer.component';
     RegisterComponent,
     ImagessliderComponent,
     FooterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule, 
