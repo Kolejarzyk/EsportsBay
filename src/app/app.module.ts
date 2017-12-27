@@ -7,6 +7,10 @@ import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app-routing.module';
+import { ImagessliderComponent } from './imagesslider/imagesslider.component';
+import { NgxCarouselModule } from 'ngx-carousel';
+import 'hammerjs';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -14,9 +18,12 @@ import { routes } from './app-routing.module';
     AppComponent,
     HeaderComponent,
     RegisterComponent,
+    ImagessliderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule, 
+    NgxCarouselModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
