@@ -7,6 +7,8 @@ import { HeaderComponent } from './header/header.component';
 import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app-routing.module';
+import { ImagessliderComponent } from './imagesslider/imagesslider.component';
+import { CarouselModule } from 'angular4-carousel';
 
 
 @NgModule({
@@ -14,9 +16,11 @@ import { routes } from './app-routing.module';
     AppComponent,
     HeaderComponent,
     RegisterComponent,
+    ImagessliderComponent,
   ],
   imports: [
     BrowserModule, 
+    CarouselModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
