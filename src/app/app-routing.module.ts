@@ -4,14 +4,17 @@ import { AppComponent } from './app.component';
 
 
 export let  routes:Routes = [
-  {path: 'register', component: RegisterComponent},
-         {
-            path:'',
-            component:AppComponent
-        },
-        {
-            path:'**',
-            redirectTo:'/home'
-        }
+    {     
+        path: 'register', 
+        component: RegisterComponent
+    },
+    {
+        path:'',
+        component:AppComponent
+    },
+    {
+        path:'**',
+        redirectTo:'/home'
+    }
 ];
 
