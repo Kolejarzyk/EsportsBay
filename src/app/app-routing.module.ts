@@ -8,10 +8,10 @@ export let  routes:Routes = [
         path: 'register', 
         component: RegisterComponent
     },
-    {
-        path:'',
-        component:AppComponent
-    },
+    // {
+    //     path:'',
+    //     component:AppComponent
+    // },
     {
         path:'**',
         redirectTo:'/home'

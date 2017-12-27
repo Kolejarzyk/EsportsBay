@@ -8,7 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './app-routing.module';
 import { ImagessliderComponent } from './imagesslider/imagesslider.component';
-import { CarouselModule } from 'angular4-carousel';
+import { NgxCarouselModule } from 'ngx-carousel';
+import 'hammerjs';
 
 
 @NgModule({
@@ -20,7 +21,7 @@ import { CarouselModule } from 'angular4-carousel';
   ],
   imports: [
     BrowserModule, 
-    CarouselModule,
+    NgxCarouselModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
