@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ICarouselConfig, AnimationConfig} from 'angular4-carousel';
 import { animation } from '@angular/core/src/animation/dsl';
+import { NgxCarousel } from 'ngx-carousel';
 
 @Component({
   selector: 'imagesslider',
@@ -16,20 +16,26 @@ export class ImagessliderComponent implements OnInit {
     'https://i.ytimg.com/vi/u_8q0pBbUpE/maxresdefault.jpg',
     'https://i.ytimg.com/vi/YZ-yC5Aedys/maxresdefault.jpg'
   ];
-
-  public config: ICarouselConfig = 
-  {
-      verifyBeforeLoad: true,
-      log: false,
-      animation: true,
-      animationType: AnimationConfig.SLIDE,
-      autoplay: true,
-      autoplayDelay: 3000,
-      stopAutoplayMinWidth: 768
-  };
+  public carouselOne: NgxCarousel;
   constructor() { }
 
   ngOnInit() {
+    this.carouselOne = {
+      grid: {xs: 1, sm: 1, md: 1, lg: 1, all: 0},
+      slide: 1,
+      speed: 400,
+      interval: 4000,
+      point: {
+        visible: true
+      },
+      load: 2,
+      touch: true,
+      loop: true,
+      custom: 'banner'
+    }
+  }
+
+  public myfunc(event: Event) {
   }
 
   
