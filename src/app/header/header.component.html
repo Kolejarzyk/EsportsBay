@@ -1,29 +1,36 @@
-<header class="header">
-    <div>
-        <div class="row-view">
-            <div class="baby"><img src="https://www.grouptravelvideos.com/images/client/00954/resources/you%20logo%20here.png" height="50px" width="150px"></div>
-  
-            <div class="row-view right-align baby">
-                <button routerLink="/torunaments" type="button" class="btn btn-deafult baby">
-                    Matches
-                </button>
-                <button routerLink="/matches" type="button" class="btn btn-deafult baby">
-                    Matches
-                </button>
-                <button routerLink="/streams" type="button" class="btn btn-deafult baby">
+<header class="container-fluid">
+    <div class="row">
+        <div class="col-sm">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link nav-logo-custom" href="/home"><img src="/assets/logo.png" height="70px" width="70px"></a>
+                </li>
+                <li class="nav-item nav-text-custom">
+                    <a class="nav-link" href="/torunaments">Tournaments</a>
+                </li>
+                <li class="nav-item nav-text-custom">
+                    <a class="nav-link" href="/matches">Matches</a>
+                </li>
+                <li class="nav-item nav-text-custom">
+                    <a class="nav-link" href="/streams">Streams</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm">
+            <ul class="nav justify-content-end">
+                <li class="nav-item nav-text-custom">
                     <span class="glyphicon glyphicon-user"></span>
-                    Login
-                </button>
-                <button routerLink="/search" type="button" class="btn btn-deafult baby">
+                    <a class="nav-link" href="/login">Login</a>
+                </li>
+                <li class="nav-item nav-text-custom">
                     <span class="glyphicon glyphicon-search"></span>
-                    Search
-                </button>
-                <button routerLink="/language" type="button" class="btn btn-deafult baby">
+                    <a class="nav-link" href="/search">Search</a>
+                </li>
+                <li class="nav-item nav-text-custom">
                     <span class="glyphicon glyphicon-globe"></span>
-                    English
-                </button>
-
-            </div>
+                    <a class="nav-link" href="/language">English</a>
+                </li>
+            </ul>
         </div>
     </div>
 </header>
