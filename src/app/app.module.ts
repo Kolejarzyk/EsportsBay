@@ -10,6 +10,7 @@ import { routes } from './app-routing.module';
 import { ImagessliderComponent } from './imagesslider/imagesslider.component';
 import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
+import { FooterComponent } from './footer/footer.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import 'hammerjs';
     HeaderComponent,
     RegisterComponent,
     ImagessliderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule, 
