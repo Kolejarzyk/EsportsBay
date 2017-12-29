@@ -2,6 +2,7 @@ import {RouterModule, Routes } from "@angular/router";
 import { RegisterComponent } from './register/register.component';
 import { AppComponent } from './app.component';
 import { LoginComponent } from "./login/login.component";
+import { TournamentComponent } from './tournament/tournament.component';
 
 
 export let  routes:Routes = [
@@ -12,6 +13,10 @@ export let  routes:Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'tournaments',
+        component: TournamentComponent
     },
     // {
     //     path:'',

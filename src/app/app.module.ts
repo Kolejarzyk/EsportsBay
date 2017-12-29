@@ -13,6 +13,7 @@ import 'hammerjs';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
 import { HotmatchComponent } from './hotmatch/hotmatch.component';
+import { TournamentComponent } from './tournament/tournament.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { HotmatchComponent } from './hotmatch/hotmatch.component';
     FooterComponent,
     LoginComponent,
     HotmatchComponent,
+    TournamentComponent,
   ],
   imports: [
     BrowserModule, 
