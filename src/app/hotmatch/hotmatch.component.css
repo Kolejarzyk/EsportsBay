@@ -1,0 +1,38 @@
+.container
+{
+    background-color: black;
+    width: 400px;
+    height: 200px;
+    border: 1px solid white;
+}
+
+h3
+{
+  color: white;
+  text-align: center;
+}
+
+p
+{
+    color: white;
+}
+
+img
+{
+   width: 100px;
+   height: 100px; 
+}
+
+
+.info
+{
+    font-weight:bold;
+    color:#000000;
+    letter-spacing:0pt;
+    word-spacing:5pt;
+    font-size:12px;
+    text-align:center;
+    font-family:arial, helvetica, sans-serif;
+    line-height:1;
+
+}
