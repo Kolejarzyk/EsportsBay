@@ -1,18 +1,18 @@
 <ngx-carousel
         [inputs]="carouselOne"
         (carouselLoad)="myfunc($event)">
-          <ngx-item NgxCarouselItem>
+          <ngx-item NgxCarouselItem class="imgStyle">
            <img src="{{imageSources[0]}}" alt="Lol">
           </ngx-item>
-          <ngx-item NgxCarouselItem>
+          <ngx-item NgxCarouselItem class="imgStyle">
             <img src="{{imageSources[1]}}" alt="Lol">
           </ngx-item>
-          <ngx-item NgxCarouselItem>
+          <ngx-item NgxCarouselItem class="imgStyle">
             <img src="{{imageSources[2]}}" alt="Lol">
           </ngx-item>
-          <ngx-item NgxCarouselItem>
+          <ngx-item NgxCarouselItem class="imgStyle">
             <img src="{{imageSources[3]}}" alt="Lol">
           </ngx-item>
           <button NgxCarouselPrev class='leftRs'>&lt;</button>
           <button NgxCarouselNext class='rightRs'>&gt;</button>
-    </ngx-carousel>
+</ngx-carousel>
