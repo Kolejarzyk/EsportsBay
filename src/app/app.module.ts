@@ -12,6 +12,7 @@ import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
+import { HotmatchComponent } from './hotmatch/hotmatch.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { LoginComponent } from './login/login.component';
     ImagessliderComponent,
     FooterComponent,
     LoginComponent,
+    HotmatchComponent,
   ],
   imports: [
     BrowserModule, 
