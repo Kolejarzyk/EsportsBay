@@ -16,6 +16,7 @@ import { HotmatchComponent } from './match/hotmatch/hotmatch.component';
 import { TournamentComponent } from './tournament/tournament.component';
 import { MatchComponent } from './match/match.component';
 import { StreamsComponent } from './streams/streams.component';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { StreamsComponent } from './streams/streams.component';
   ],
   imports: [
     BrowserModule, 
+    HttpModule,
     NgxCarouselModule,
     RouterModule.forRoot(routes)
   ],
