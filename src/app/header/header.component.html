@@ -17,7 +17,7 @@
             </ul>
         </div>
         <div class="col-sm">
-            <ul class="nav justify-content-end">
+            <ul id="text1" class="nav justify-content-end">
                 <li class="nav-item nav-text-custom">
                         <div class="btn-group">
                                 <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -31,11 +31,22 @@
                 </li>
                 <li class="nav-item nav-text-custom">
                     <!-- <span class="glyphicon glyphicon-search"></span> -->
-                    <a class="nav-link glyphicon glyphicon-search" href="/search"> Search</a>
+                    <a class="nav-link glyphicon glyphicon-search" href="#" onclick="showStuff('answer1', 'text1', this); return false;"> Search</a>
                 </li>
                 <li class="nav-item nav-text-custom">
                     <!-- <span class="glyphicon glyphicon-globe"></span> -->
                     <a class="nav-link glyphicon glyphicon-globe" href="/language"> English</a>
+                </li>
+            </ul>
+            <ul id="answer1" class="nav justify-content-end" style="display: none;">
+                <li class="nav-item nav-text-custom">
+                    <!-- <a class="nav-link glyphicon glyphicon-search" href="#" onclick="showStuff('text1', 'answer1', this); return false;"> kappa</a> -->
+                    <nav class="navbar navbar-light bg-light">
+                        <form class="form-inline">
+                              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" onclick="showStuff('text1', 'answer1', this); return false;">Search</button>
+                        </form>
+                    </nav>
                 </li>
             </ul>
         </div>
