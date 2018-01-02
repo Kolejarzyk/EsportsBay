@@ -3,6 +3,7 @@ import { RegisterComponent } from './register/register.component';
 import { AppComponent } from './app.component';
 import { LoginComponent } from "./login/login.component";
 import { TournamentComponent } from './tournament/tournament.component';
+import { MatchComponent } from "./match/match.component";
 
 
 export let  routes:Routes = [
@@ -17,6 +18,10 @@ export let  routes:Routes = [
     {
         path: 'tournaments',
         component: TournamentComponent
+    },
+    {
+        path: 'matches',
+        component: MatchComponent
     },
     // {
     //     path:'',
