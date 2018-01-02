@@ -12,8 +12,9 @@ import { NgxCarouselModule } from 'ngx-carousel';
 import 'hammerjs';
 import { FooterComponent } from './footer/footer.component';
 import { LoginComponent } from './login/login.component';
-import { HotmatchComponent } from './hotmatch/hotmatch.component';
+import { HotmatchComponent } from './match/hotmatch/hotmatch.component';
 import { TournamentComponent } from './tournament/tournament.component';
+import { MatchComponent } from './match/match.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { TournamentComponent } from './tournament/tournament.component';
     LoginComponent,
     HotmatchComponent,
     TournamentComponent,
+    MatchComponent,
   ],
   imports: [
     BrowserModule, 
