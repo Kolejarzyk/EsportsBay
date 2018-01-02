@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { RegisterModel } from './registerModel'
-
+import { Http, Headers, RequestOptions} from "@angular/http"
+import { Router } from "@angular/router"
+import "rxjs/Rx";
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -8,9 +9,42 @@ import { RegisterModel } from './registerModel'
 })
 export class RegisterComponent implements OnInit {
   
-  constructor() { }
+  public input: any;
+  constructor(private http: Http, private router: Router) {
+    this.input = {
+
+      "firstname": "",
+
+      "lastname": "",
+
+      "email": "",
+
+      "password": ""
+
+  };
+   }
 
   ngOnInit() {
   }
 
+  public register()
+  {
+    if(this.input.email && this.input.password) {
+
+      let headers = new Headers({ "content-type": "application/json" });
+
+      let options = new RequestOptions({ headers: headers });
+
+      this.http.post("http://localhost:4200/account", JSON.stringify(this.input), options)
+
+          .map(result => result.json())
+
+          .subscribe(result => {
+
+              this.router.navigate(["/login"]);
+
+          });
+
+  }
+  }
 }

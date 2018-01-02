@@ -15,6 +15,7 @@ import { LoginComponent } from './login/login.component';
 import { HotmatchComponent } from './match/hotmatch/hotmatch.component';
 import { TournamentComponent } from './tournament/tournament.component';
 import { MatchComponent } from './match/match.component';
+import { StreamsComponent } from './streams/streams.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { MatchComponent } from './match/match.component';
     HotmatchComponent,
     TournamentComponent,
     MatchComponent,
+    StreamsComponent,
   ],
   imports: [
     BrowserModule, 
