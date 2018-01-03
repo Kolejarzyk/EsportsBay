@@ -18,6 +18,7 @@ import { MatchComponent } from './match/match.component';
 import { StreamsComponent } from './streams/streams.component';
 import { HttpModule } from '@angular/http';
 import { MainAppComponent } from './main-app/main-app.component';
+import { CreateTournamentComponent } from './tournament/create-tournament/create-tournament.component';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { MainAppComponent } from './main-app/main-app.component';
     MatchComponent,
     StreamsComponent,
     MainAppComponent,
+    CreateTournamentComponent,
   ],
   imports: [
     BrowserModule, 
