@@ -7,6 +7,7 @@ import { MatchComponent } from "./match/match.component";
 import { StreamsComponent } from "./streams/streams.component";
 import { ImagessliderComponent } from "./imagesslider/imagesslider.component";
 import { MainAppComponent } from "./main-app/main-app.component";
+import { CreateTournamentComponent } from './tournament/create-tournament/create-tournament.component';
 
 
 export let  routes:Routes = [
@@ -31,6 +32,10 @@ export let  routes:Routes = [
         {
             path: 'streams',
             component: StreamsComponent
+        },
+        {
+            path: 'create-tournament',
+            component: CreateTournamentComponent
         }
         ]
     },
