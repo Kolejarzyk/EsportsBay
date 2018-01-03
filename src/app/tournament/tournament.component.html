@@ -4,32 +4,32 @@
         <tbody>
           <tr>
             <!-- gra -->
-            <td class="col-md-2">League of Legends</td>
+            <td class="col-md-2">{{tournament1.gameName.name}}</td>
             <!-- mapa -->
-            <td class="col-md-2">Summoners Rift</td>
+            <td class="col-md-2">{{tournament1.map}}</td>
             <!-- nazwa -->
-            <td class="col-md-2">Turniej 5v5</td>
+            <td class="col-md-2">{{tournament1.type}}</td>
             <!-- ilość gier -->
-            <td class="col-md-2">Best of 3</td>
+            <td class="col-md-2">{{tournament1.format}}</td>
             <!-- ilość graczy -->
-            <td class="col-md-2">13/16 graczy</td>
+            <td class="col-md-2">{{tournament1.numberOfPlayers}}/{{tournament1.maxNumberOfPlayers}}</td>
             <!-- data rozpoczęcia -->
-            <td class="col-md-2">1h 37m</td>
+            <td class="col-md-2">{{tournament1.time}} {{tournament1.date}}</td>
           </tr>
           <tr>
-              <!-- gra -->
-              <td class="col-md-2">League of Legends</td>
-              <!-- mapa -->
-              <td class="col-md-2">Summoners Rift</td>
-              <!-- nazwa -->
-              <td class="col-md-2">Turniej 5v5</td>
-              <!-- ilość gier -->
-              <td class="col-md-2">Best of 3</td>
-              <!-- ilość graczy -->
-              <td class="col-md-2">13/16 graczy</td>
-              <!-- data rozpoczęcia -->
-              <td class="col-md-2">1h 37m</td>
-            </tr>
+            <!-- gra -->
+            <td class="col-md-2">{{tournament2.gameName.name}}</td>
+            <!-- mapa -->
+            <td class="col-md-2">{{tournament2.map}}</td>
+            <!-- nazwa -->
+            <td class="col-md-2">{{tournament2.type}}</td>
+            <!-- ilość gier -->
+            <td class="col-md-2">{{tournament2.format}}</td>
+            <!-- ilość graczy -->
+            <td class="col-md-2">{{tournament2.numberOfPlayers}}/{{tournament2.maxNumberOfPlayers}}</td>
+            <!-- data rozpoczęcia -->
+            <td class="col-md-2">{{tournament2.time}} {{tournament1.date}}</td>
+          </tr>
         </tbody>
       </table>
 
