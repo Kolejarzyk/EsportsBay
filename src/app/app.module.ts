@@ -19,7 +19,13 @@ import { StreamsComponent } from './streams/streams.component';
 import { HttpModule } from '@angular/http';
 import { MainAppComponent } from './main-app/main-app.component';
 import { CreateTournamentComponent } from './tournament/create-tournament/create-tournament.component';
-
+import { UserService } from './.services/user.service';
+import { AuthenticationService } from './.services/authentication.service';
+import { AlertService } from './.services/alert.service';
+import { AppConfig} from './app.config';
+import { AuthGuard} from './.guard/auth.guard';
+import { AlertComponent } from './-alert/-alert.component';
+import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,14 +41,23 @@ import { CreateTournamentComponent } from './tournament/create-tournament/create
     StreamsComponent,
     MainAppComponent,
     CreateTournamentComponent,
+    AlertComponent
   ],
   imports: [
     BrowserModule, 
+    FormsModule,
+    ReactiveFormsModule,
     HttpModule,
     NgxCarouselModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    AppConfig,
+    AuthGuard,
+    AlertService,
+    AuthenticationService,
+    UserService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
