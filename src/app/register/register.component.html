@@ -1,17 +1,26 @@
 <div class="container">
-  <form>
-    <div class="form-group">
-      <label for="username">E-mail</label>
-      <input type="text" class="form-control" id="username" name="username" placeholder="Wpisz e-mail" required>
+  <form name="form" (ngSubmit)="f.form.valid  && register()" #f="ngForm" novalidate>
+    <div class="form-group" [ngClass] =" {'has-error': f.submitted && !username.valid}">
+      <label for="firstName">First Name</label>
+      <input type="text" class="form-control" name="username" placeholder="Wpisz e-mail" [(ngModel)="model.firstName"]  required>
+      <div *ngIf="f.submitted && !firstName.valid" class="help-block">First Name is required</div>
     </div>
-    <div class="form-group">
-      <label for="password">Hasło</label>
-      <input type="password" class="form-control" id="password" name="password" placeholder="Wpisz hasło"  required>
+    <div class="form-group" [ngClass] =" {'has-error': f.submitted && !username.valid}">
+      <label for="lastName">Last Name</label>
+      <input type="text" class="form-control"  name="password" placeholder="Wpisz hasło" [(ngModel)="model.lastName"]  required>
+      <div *ngIf="f.submitted && !lastName.valid" class="help-block">Last name is required</div>
     </div>
-    <div class="form-group">
-      <label for="Rpassword">Powtórz hasło</label>
-      <input type="password" class="form-control" id="Rpassword" name="Rpassword" placeholder="Powtórz hasło" required>
+    <div class="form-group" [ngClass] =" {'has-error': f.submitted && !username.valid}">
+      <label for="username"> Username</label>
+      <input type="text" class="form-control"  name="password" placeholder="Wpisz hasło" [(ngModel)="model.username"]  required>
+      <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
+    </div>
+    <div class="form-group" [ngClass] =" {'has-error': f.submitted && !username.valid}">
+      <label for="password">Powtórz hasło</label>
+      <input type="password" class="form-control"  name="password" placeholder="Powtórz hasło" [(ngModel)="model.password"] required>
+      <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
     </div>
     <button type="submit" class="btn btn-primary">Zarejestruj</button>
+    <a routerLink='' class="btn btn-link">Cancel</a>
   </form>
 </div>

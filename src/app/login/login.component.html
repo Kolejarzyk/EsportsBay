@@ -1,11 +1,13 @@
-<form class="px-4 py-3">
-    <div class="form-group">
-      <label for="exampleDropdownFormEmail1">Email address</label>
-      <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+<form class="px-4 py-3" name="form" (ngSubmit)="f.form.valid && login()" #f="ngForm" novalidate>
+    <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !username.valid }">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" placeholder="username" [(ngModel)]="model.username" #username="ngModel" required>
+      <div *ngIf="f.submitted && !username.valid" class="help-block">Username is required</div>
     </div>
     <div class="form-group">
-      <label for="exampleDropdownFormPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" placeholder="Password" [(ngModel)]="model.password" #password="ngModel" required>
+      <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
     </div>
     <div class="form-check">
       <input type="checkbox" class="form-check-input" id="dropdownCheck">
@@ -16,5 +18,5 @@
     <button type="submit" class="btn btn-primary">Sign in</button>
   </form>
   <div class="dropdown-divider"></div>
-  <a class="dropdown-item" href="#">New around here? Sign up</a>
+  <a [routerLink]="['/register']" class="btn btn-link">Register</a>
   <a class="dropdown-item" href="#">Forgot password?</a>
