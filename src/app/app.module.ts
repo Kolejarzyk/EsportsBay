@@ -25,6 +25,7 @@ import { AlertService } from './.services/alert.service';
 import { AuthenticationService } from './.services/authentication.service';
 import { UserService } from './.services/user.service';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { CreateTournamentComponent } from './tournament/create-tournament/create-tournament.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,9 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
     StreamsComponent,
     MainAppComponent,
     AlertComponent,
+
+    CreateTournamentComponent,
+
   ],
   imports: [
     BrowserModule, 

@@ -1,27 +1,54 @@
 <div class="container-fluid">
-  <div class="col-md-9 table-custom">
-      <a><img src="http://ddragon.leagueoflegends.com/cdn/6.8.1/img/map/map11.png" height="70px" width="70px"></a>
-
-  </div>
-  <!-- <div class="d-flex">
-    <div class="p-2">
-      <table class="table table-bordered table-custom_1">
+  <div class="col-md-10">
+      <table class="table table-hover table-custom">
         <tbody>
-            <tr>
-              <td class="col">John</td>
-            </tr>
+          <tr>
+            <!-- gra -->
+            <td class="col-md-2">{{tournament1.gameName.name}}</td>
+            <!-- mapa -->
+            <td class="col-md-2">{{tournament1.map}}</td>
+            <!-- nazwa -->
+            <td class="col-md-2">{{tournament1.type}}</td>
+            <!-- ilość gier -->
+            <td class="col-md-2">{{tournament1.format}}</td>
+            <!-- ilość graczy -->
+            <td class="col-md-2">{{tournament1.numberOfPlayers}}/{{tournament1.maxNumberOfPlayers}}</td>
+            <!-- data rozpoczęcia -->
+            <td class="col-md-2">{{tournament1.time}} {{tournament1.date}}</td>
+          </tr>
+          <tr>
+            <!-- gra -->
+            <td class="col-md-2">{{tournament2.gameName.name}}</td>
+            <!-- mapa -->
+            <td class="col-md-2">{{tournament2.map}}</td>
+            <!-- nazwa -->
+            <td class="col-md-2">{{tournament2.type}}</td>
+            <!-- ilość gier -->
+            <td class="col-md-2">{{tournament2.format}}</td>
+            <!-- ilość graczy -->
+            <td class="col-md-2">{{tournament2.numberOfPlayers}}/{{tournament2.maxNumberOfPlayers}}</td>
+            <!-- data rozpoczęcia -->
+            <td class="col-md-2">{{tournament2.time}} {{tournament1.date}}</td>
+          </tr>
         </tbody>
       </table>
-            <tr>
-              <td class="col">John</td>
-            </tr>
-   </div>
-    <div class="ml-auto p-2">Flex item</div>
-  </div> -->
-  <div class="col-md-3 table-custom">
-    przycisk
+
+  </div>
+  <div class="col-md-2">
+    <table class="table table-bordered">
+      <tbody>
+        <tr class="">
+          <td class=""><button type="button" class="btn btn-primary btn-lg btn-block" routerLink="/create-tournament">Stwórz turniej</button></td>
+        </tr>
+        <tr>
+            <td><button type="button" class="btn btn-secondary btn-lg btn-block">Block level button</button></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
+
+<!-- mapa, nazwa, ilość graczy, data rozpoczęcia -->
 
 
 

@@ -1,0 +1,13 @@
+.card-text
+{
+    display: flex;
+    justify-content: space-around;
+}
+.p-2
+{
+    margin: 10px;
+}
+.form-custom
+{
+    border: 1px solid #e9ecef;
+}
