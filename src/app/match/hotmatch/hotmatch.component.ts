@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { TeamModel } from './TeamModel';
-import { MatchModel } from './MatchModel';
+
+import { TeamModel } from '../../models/TeamModel';
+import { MatchModel } from '../../models/MatchModel';
 
 @Component({
   selector: 'hotmatch',
