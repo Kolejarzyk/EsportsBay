@@ -4,7 +4,7 @@ import { AlertService } from '../.services/alert.service';
 
 import { UserService } from '../.services/user.service';
 @Component({
-  selector: 'app-register',
+  selector: 'register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
@@ -13,7 +13,10 @@ export class RegisterComponent implements OnInit {
   model: any = {};
   loading = false;
 
-  constructor( private router: Router, private userService: UserService, private alertService: AlertService) {}
+  constructor( private router: Router, 
+    private userService: UserService,
+     private alertService: AlertService)
+      {}
 
   register()
   {
@@ -21,7 +24,7 @@ export class RegisterComponent implements OnInit {
     this.userService.create(this.model)
     .subscribe(data => {
       this.alertService.success('Registration successful', true);
-      this.router.navigate(['/login']);
+      this.router.navigate(['/']);
     },
     error => {
       this.alertService.error(error._body);

@@ -26,7 +26,8 @@
 
 .streambox
 {
-   position: relative;
+   position: relative;   
+   display: inline;
   margin-top: 50px;
   width: 300px;
   height: 300px;
@@ -53,7 +54,7 @@
     position: absolute;
     width: 300px;
     left: 0;
-    top: 120px;
+    top: 420px;
     font-weight: 700;
     font-size: 30px;
     text-align: center;
@@ -64,14 +65,14 @@
   }
 
 .streambox:hover .title {
-    top: 90px;
+    top: 40px;
 }
 
 .button {
     position: absolute;
     width: 300px;
     left:0;
-    top: 180px;
+    top: 0;
     text-align: center;
     opacity: 0;
     transition: opacity .35s ease;

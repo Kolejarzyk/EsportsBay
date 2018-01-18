@@ -13,10 +13,13 @@ import "rxjs/Rx";
 })
 export class LoginComponent implements OnInit {
 
-  model: any = {};
+  model: any = {};  
   loading = false;
   returnUrl: string;
-  constructor(private route: ActivatedRoute, private router: Router, private authenticationService: AuthenticationService, private alertSerivce: AlertService) 
+  constructor(private route: ActivatedRoute, 
+    private router: Router, 
+    private authenticationService: AuthenticationService, 
+    private alertSerivce: AlertService) 
   {}
   ngOnInit() {
     this.authenticationService.logout();
