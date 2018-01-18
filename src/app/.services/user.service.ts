@@ -2,7 +2,7 @@ import { Injectable} from '@angular/core'
 import { Http, Headers, RequestOptions, Response } from '@angular/http';
 
 import { AppConfig} from '../app.config';
-import { User } from '../.services/user';
+import { User } from '../models/user';
 
 
 @Injectable()
