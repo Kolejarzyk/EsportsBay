@@ -14,11 +14,11 @@
   
 </div>
 <div class="hotmatch">
-  <div class="streambox">
-        <img src="https://static-cdn.jtvnw.net/jtv_user_pictures/eleaguetv-profile_image-3944326c25ed471d-300x300.jpeg" alt="">
+    <div class="streambox" *ngFor="let stream of twitchTVStream">
+        <img src="{{stream.imgUrl}}" alt="">
         <div class="overlay"></div>
-        <div class="title"> Eleague Twitch</div>
-        <div class="button"><a href="https://www.twitch.tv/eleaguetv"> BUTTON </a></div>
+        <div class="title"> {{stream.display_name}}</div>
+        <div class="button"><a href="{{stream.url}}"> BUTTON </a></div>
   </div>
 
 </div>
