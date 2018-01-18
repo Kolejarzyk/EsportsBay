@@ -14,10 +14,10 @@
   
 </div>
 <div class="hotmatch">
-    <div class="streambox" *ngFor="let stream of twitchTVStream">
+    <div class="streambox" *ngFor="let stream of model">
         <img src="{{stream.imgUrl}}" alt="">
         <div class="overlay"></div>
-        <div class="title"> {{stream.display_name}}</div>
+        <div class="title"> {{stream.displayName}}</div>
         <div class="button"><a href="{{stream.url}}"> BUTTON </a></div>
   </div>
 
