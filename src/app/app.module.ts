@@ -26,6 +26,7 @@ import { AppConfig} from './app.config';
 import { AuthGuard} from './.guard/auth.guard';
 import { AlertComponent } from './-alert/-alert.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
+import { StreamService } from './streams/stream.service';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
     AuthGuard,
     AlertService,
     AuthenticationService,
-    UserService
+    UserService,
+    StreamService
   ],
   bootstrap: [AppComponent]
 })
