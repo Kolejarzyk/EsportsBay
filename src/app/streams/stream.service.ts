@@ -14,6 +14,16 @@ export class StreamService
         return this.http.get("http://localhost:53504/api/Stream").map(r => r.json());
     }
 
+    public getStreamByCSGO():Observable<StreamModel[]>
+    {
+        return this.http.get("http://localhost:53504/api/Stream/CSGO").map(r => r.json());
+    }
+
+    public getStreamByLOL():Observable<StreamModel[]>
+    {
+        return this.http.get("http://localhost:53504/api/Stream/LOL").map(r => r.json());
+    }
+
 
 
 
