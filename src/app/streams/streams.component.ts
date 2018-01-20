@@ -28,13 +28,22 @@ export class StreamsComponent implements OnInit {
     })
   }
 
+  
   searchLOLStream()
   {
-
+    this.service.getStreamByLOL().subscribe( items => 
+      {
+        this.model = items;
+        this.isLoading = false;
+      })
   }
   
   searchCSGOStream()
   {
-
+    this.service.getStreamByCSGO().subscribe( items => 
+      {
+        this.model = items;
+        this.isLoading = false;
+      })
   }
 }
