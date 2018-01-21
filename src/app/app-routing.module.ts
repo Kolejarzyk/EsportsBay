@@ -8,6 +8,8 @@ import { StreamsComponent } from "./streams/streams.component";
 import { ImagessliderComponent } from "./imagesslider/imagesslider.component";
 import { MainAppComponent } from "./main-app/main-app.component";
 import { CreateTournamentComponent } from './tournament/create-tournament/create-tournament.component';
+import { HomeComponent } from "./home/home.component";
+import { AuthGuard } from "./.guard/auth.guard";
 
 
 export let  routes:Routes = [
@@ -36,6 +38,10 @@ export let  routes:Routes = [
         {
             path: 'create-tournament',
             component: CreateTournamentComponent
+        },
+        {
+           path: 'homes',
+             component: HomeComponent, canActivate: [AuthGuard]
         }
         ]
     },
@@ -51,8 +57,6 @@ export let  routes:Routes = [
         path: 'login',
         component: LoginComponent
     },
-    
-   
     // {
     //     path:'',
     //     component:AppComponent

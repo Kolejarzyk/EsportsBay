@@ -27,6 +27,8 @@ import { AuthGuard} from './.guard/auth.guard';
 import { AlertComponent } from './-alert/-alert.component';
 import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { StreamService } from './streams/stream.service';
+import { HomeComponent } from './home/home.component';
+import { MatchService } from './match/hotmatch/match.service';
 
 @NgModule({
   declarations: [
@@ -42,7 +44,8 @@ import { StreamService } from './streams/stream.service';
     StreamsComponent,
     MainAppComponent,
     CreateTournamentComponent,
-    AlertComponent
+    AlertComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule, 
@@ -58,7 +61,8 @@ import { StreamService } from './streams/stream.service';
     AlertService,
     AuthenticationService,
     UserService,
-    StreamService
+    StreamService,
+    MatchService
   ],
   bootstrap: [AppComponent]
 })
