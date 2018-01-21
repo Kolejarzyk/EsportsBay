@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TeamModel } from './TeamModel';
 import { MatchModel } from './MatchModel';
+import { Observable } from 'rxjs/Observable';
+import { MatchService } from './match.service';
 
 @Component({
   selector: 'hotmatch',
@@ -9,27 +11,29 @@ import { MatchModel } from './MatchModel';
 })
 export class HotmatchComponent implements OnInit {
 
-  teamVirtusPro: TeamModel = {
-    name: "Virtus Pro",
-    logoImg: "/assets/virtus.png"
-  }
-
-  teamSK: TeamModel = 
-  {
-    name: "SK Gaming",
-    logoImg: "/assets/sk.png"
-  }
-
-  match: MatchModel =
-  {
-    firstTeam: this.teamVirtusPro,
-    secondTeam: this.teamSK,
-    time: "14:00",
-    date: new Date(2017,12,24)
-  }
-  constructor() { }
+  listOfStream = new Observable<MatchModel[]>();
+  
+  public isLoading: boolean;
+  private term: string = "";
+  model: MatchModel[];
+  constructor(private service: MatchService) { }
 
   ngOnInit() {
+    this.isLoading = true;
+    this.service.getMatches().subscribe( items => 
+    {
+      this.model = items;
+      this.isLoading = false;
+    })
   }
 
+
+  searchTeam(term : string)
+  {
+    this.service.getMatch(term).subscribe( items => 
+      {
+        this.model = items;
+        this.isLoading = false;
+      })
+  }
 }

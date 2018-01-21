@@ -1,20 +1,20 @@
-<div class="container">
+<nav class="navbar navbar-light bg-light">
+    <form class="form-inline" (ngSubmit)="searchTeam(term)">
+      <input class="form-control mr-sm-2" type="search" name="search" placeholder="Search" [(ngModel)]="term" aria-label="Search">
+      <button class="btn btn-dark my-2 my-sm-0" type="submit">Search Team</button>
+    </form>
+  </nav>
+
+
+<div class="container" *ngFor="let match of model">
  
-        <h3>Esl One Cologne</h3>
- 
-   
-    <div class="row ">
-        <div class="col">
-            <img src="{{match.firstTeam.logoImg}}" alt="{{match.firstTeam.name}}">
-        </div>
-        <div class="col info">
-            <p>SemiFinal</p> <br>
-            <p>{{match.time}}</p> <br>
-            <p>{{match.date.toDateString()}}</p>
-        </div>
-        <div class="col">
-          <img src="{{match.secondTeam.logoImg}}" alt="{{match.secondTeam.name}}">
-        </div>  
+    <div class="streambox" >     
+     <h3>{{match.description}}</h3> 
+     <p>{{match.scoreTeam1}}</p> 
+     <p>{{match.scoreTeam2}}</p> 
+     <p>{{match.startDate}}</p> 
+     <p>{{match.team1}}</p> 
+     <p>{{match.team2}}</p>
     </div>
   
 </div>
