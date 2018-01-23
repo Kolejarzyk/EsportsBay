@@ -1,4 +1,18 @@
 <div class="select_match">
+
+    <div class="lang_select">
+        <button class="btn btn-default" (click)="searchByLang('PL')">
+            <img src="/assets/pl_lang.png" alt="Polish"> Polish
+        </button>
+        <button class="btn btn-default" (click)="searchByLang('EN')">
+             <img src="/assets/en_lang.png" alt="English"> English
+        </button>
+
+        <button class="btn btn-default" (click)="searchByLang('FR')">
+            <img src="/assets/fr_lang.png" alt="French"> French
+        </button>
+
+    </div>
   <div class="lol_select">
       <button class="btn btn-default" (click)="searchLOLStream()">
           <img src="/assets/lol_logo.png"> Leauge of Legends

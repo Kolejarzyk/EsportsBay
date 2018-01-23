@@ -13,7 +13,7 @@ export class StreamsComponent implements OnInit {
   listOfStream = new Observable<StreamModel[]>();
 
   public isLoading: boolean;
-
+  private term: string = "";
   model: StreamModel[];
 
   constructor(private service: StreamService) { }
@@ -45,5 +45,14 @@ export class StreamsComponent implements OnInit {
         this.model = items;
         this.isLoading = false;
       })
+  }
+
+  searchByLang(lang: string)
+  {
+    this.service.getStreamByLang(lang).subscribe(items => 
+    {
+      this.model = items;
+      this.isLoading = false;
+    })
   }
 }
