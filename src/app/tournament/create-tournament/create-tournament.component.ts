@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {SingleEliminationTournament, SingleEliminationBracket } from "@siggame/tourneyjs"
+import { TeamModel } from '../../match/hotmatch/TeamModel';
 
 @Component({
   selector: 'app-create-tournament',
@@ -7,8 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateTournamentComponent implements OnInit {
 
+  teams : TeamModel[]
   constructor() { }
-
+ 
   ngOnInit() {
   }
 

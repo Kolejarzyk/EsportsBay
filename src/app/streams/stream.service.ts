@@ -24,7 +24,10 @@ export class StreamService
         return this.http.get("http://localhost:53504/api/Stream/LOL").map(r => r.json());
     }
 
-
+    public getStreamByLang(lang: string):Observable<StreamModel[]>
+    {
+        return this.http.get("http://localhost:53504/api/Stream/lang/" + lang).map(r => r.json());
+    }
 
 
 }
