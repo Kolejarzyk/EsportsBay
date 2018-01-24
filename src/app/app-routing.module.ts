@@ -10,6 +10,8 @@ import { MainAppComponent } from "./main-app/main-app.component";
 import { CreateTournamentComponent } from './tournament/create-tournament/create-tournament.component';
 import { HomeComponent } from "./home/home.component";
 import { AuthGuard } from "./.guard/auth.guard";
+import { AddmatchComponent } from "./home/addmatch/addmatch.component";
+import { AddstreamComponent } from "./home/addstream/addstream.component";
 
 
 export let  routes:Routes = [
@@ -56,6 +58,14 @@ export let  routes:Routes = [
     {
         path: 'login',
         component: LoginComponent
+    },
+    {
+        path: 'addMatch',
+        component: AddmatchComponent
+    },
+    {
+        path: 'addStream',
+        component: AddstreamComponent
     },
     // {
     //     path:'',

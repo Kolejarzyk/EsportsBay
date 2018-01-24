@@ -19,6 +19,9 @@ export class MatchService
         return this.http.get("http://localhost:53504/api/Match/" + teamName).map(r => r.json());
     }
 
-
+    public addMatch(match: MatchModel)
+    {
+        return this.http.post("http://localhost:53504/api/Match", match);
+    }
 
 }
