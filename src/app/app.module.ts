@@ -29,6 +29,7 @@ import { FormsModule, ReactiveFormsModule }   from '@angular/forms';
 import { StreamService } from './streams/stream.service';
 import { HomeComponent } from './home/home.component';
 import { MatchService } from './match/hotmatch/match.service';
+import { TournamentDetailsComponent } from './tournament/tournament-details/tournament-details.component';
 import { AddmatchComponent } from './home/addmatch/addmatch.component';
 import { AddstreamComponent } from './home/addstream/addstream.component';
 
@@ -48,6 +49,7 @@ import { AddstreamComponent } from './home/addstream/addstream.component';
     CreateTournamentComponent,
     AlertComponent,
     HomeComponent,
+    TournamentDetailsComponent,
     AddmatchComponent,
     AddstreamComponent
   ],
