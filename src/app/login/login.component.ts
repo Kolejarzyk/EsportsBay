@@ -6,6 +6,8 @@ import { AuthenticationService } from '../.services/authentication.service';
 import { AlertService } from '..//.services/alert.service';
 
 import "rxjs/Rx";
+import { MatchService } from '../match/hotmatch/match.service';
+import { StreamService } from '../streams/stream.service';
 @Component({
   selector: 'login',
   templateUrl: './login.component.html',
@@ -21,7 +23,9 @@ export class LoginComponent implements OnInit {
         private route: ActivatedRoute,
         private router: Router,
         private authenticationService: AuthenticationService,
-        private alertService: AlertService) { }
+        private alertService: AlertService,
+        private matchService: MatchService,
+        private stream: StreamService) { }
  
     ngOnInit() {
         // reset login status

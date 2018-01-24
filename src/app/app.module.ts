@@ -30,6 +30,8 @@ import { StreamService } from './streams/stream.service';
 import { HomeComponent } from './home/home.component';
 import { MatchService } from './match/hotmatch/match.service';
 import { TournamentDetailsComponent } from './tournament/tournament-details/tournament-details.component';
+import { AddmatchComponent } from './home/addmatch/addmatch.component';
+import { AddstreamComponent } from './home/addstream/addstream.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { TournamentDetailsComponent } from './tournament/tournament-details/tour
     CreateTournamentComponent,
     AlertComponent,
     HomeComponent,
-    TournamentDetailsComponent
+    TournamentDetailsComponent,
+    AddmatchComponent,
+    AddstreamComponent
   ],
   imports: [
     BrowserModule, 

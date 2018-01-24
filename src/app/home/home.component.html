@@ -1,6 +1,6 @@
 <div class="col-md-6 col-md-offset-3">
   <h1>Hi {{currentUser.firstName}}!</h1>
-  <p>You're logged in with the MEAN Stack & Angular 2!!</p>
+  <p>Welcome in edit panel!!!!!!!</p>
   <h3>All registered users:</h3>
   <ul>
       <li *ngFor="let user of users">
@@ -8,5 +8,10 @@
           - <a (click)="deleteUser(user._id)">Delete</a>
       </li>
   </ul>
+
+  <a  routerLink="/addMatch" href="#">AddMatch</a> <br>
+  <a  routerLink="/addStream" href="#">AddStream</a>
+
+  
   <p><a [routerLink]="['/login']">Logout</a></p>
 </div>
