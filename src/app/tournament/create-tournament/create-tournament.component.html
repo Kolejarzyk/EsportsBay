@@ -1,50 +1,95 @@
-<div class="d-flex flex-row justify-content-center">
-  <div class="p-2">
-    <div class="card" style="width: 34rem;">
-      <img class="card-img-top" src="https://vignette.wikia.nocookie.net/leagueoflegends/images/4/41/Summoner%27s_Rift_Map_Preview.jpg/revision/latest/scale-to-width-down/300?cb=20170227032638" alt="Card image cap">
-      <div class="card-body">
-        <h3 class="card-title">Summoners Rift</h3>
-        <p class="card-text">Summoner's Rift to pierwsze i najbardziej popularne Fields of Justice – stanowi standard dla turniejów League of Legends w rozgrywce 5v5.
-           Gra na mapie dzieli się przeważnie na odrębne fazy – zaczynając się od pojedynków na alei i przechodząc w starcia całych drużyn. 
-           Zwycięża się poprzez wdarcie się do bazy wroga i zniszczenie nexusa. Podzielone jest na dwie identyczne połowy i zawiera trzy aleje, 
-           prowadzące do bazy wroga. Każdej z nich bronią trzy wieże oraz inhibitor, a samego nexusa – dwie kolejne wieże. Po obu stronach mapy rozciąga się rozległa dżungla, 
-           w której znajdują się potężne wzmocnienia, a na centralnej rzece pojawiają się dwa potężne potwory, których pokonanie zapewnia premię dla całej drużyny.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+<div class="py-5">
+  <div class="container-fluid">
+    <form class="form-horizontal">
+      <fieldset>
+      
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="map">Wybierz mapę</label>
+        <div class="col-md-4">
+          <select id="map" name="map" class="form-control">
+            <option value="summoners_rift">Summoners Rift</option>
+            <option value="aram">ARAM</option>
+            <option value="twisted_treeline">Twisted Treeline</option>
+          </select>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="p-2">
-    <div class="card" style="width: 34rem;">
-      <img class="card-img-top" src="https://vignette.wikia.nocookie.net/leagueoflegends/images/9/9a/Twisted_Treeline_Map_Preview.jpg/revision/latest?cb=20140612032104" alt="Card image cap">
-      <div class="card-body">
-        <h3 class="card-title">Twisted Treeline</h3>
-        <p class="card-text">Twisted Treeline to mapa z dwiema alejami, a głównym zadaniem trzyosobowych drużyn jest zniszczenie Nexusa przeciwnika. 
-          Pomiędzy alejami znajduje się dżungla, w której znajduje się kilka obozów neutralnych potworów oraz dwa ołtarze – wschodni i zachodni, 
-          które zapewniają dodatkowe korzyści oraz opowiadają historię tego miejsca. </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+      
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="format">Format rozgrywki</label>
+        <div class="col-md-4">
+          <select id="format" name="format" class="form-control">
+            <option value="1">Best of 1</option>
+            <option value="3">Best of 3</option>
+            <option value="5">Best of 5</option>
+          </select>
+        </div>
       </div>
-    </div>
-  </div>
-  <div class="p-2">
-    <div class="card" style="width: 34rem;">
-      <img class="card-img-top" src="https://eune.leagueoflegends.com/sites/default/files/styles/scale_xlarge/public/upload/HowlingAbyss_Article.jpg?itok=7eek225F" alt="Card image cap">
-      <div class="card-body">
-        <h3 class="card-title">Twisted Treeline</h3>
-        <p class="card-text">Twisted Treeline to mapa z dwiema alejami, a głównym zadaniem trzyosobowych drużyn jest zniszczenie Nexusa przeciwnika. 
-          Pomiędzy alejami znajduje się dżungla, w której znajduje się kilka obozów neutralnych potworów oraz dwa ołtarze – wschodni i zachodni, 
-          które zapewniają dodatkowe korzyści oraz opowiadają historię tego miejsca. </p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+      
+      <!-- Select Basic -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="type">Typ rogrywki</label>
+        <div class="col-md-4">
+          <select id="type" name="type" class="form-control">
+            <option value="1v1">1v1</option>
+            <option value="2v2">2v2</option>
+            <option value="3v3">3v3</option>
+            <option value="4v4">4v4</option>
+            <option value="5v5">5v5</option>
+          </select>
+        </div>
       </div>
-    </div>
+      
+      <!-- Multiple Radios (inline) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="players_number">Liczba graczy/drużyn</label>
+        <div class="col-md-4"> 
+          <label class="radio-inline" for="players_number-0">
+            <input type="radio" name="players_number" id="players_number-0" value="8" checked="checked">
+            8
+          </label> 
+          <label class="radio-inline" for="players_number-1">
+            <input type="radio" name="players_number" id="players_number-1" value="16">
+            16
+          </label> 
+          <label class="radio-inline" for="players_number-2">
+            <input type="radio" name="players_number" id="players_number-2" value="32">
+            32
+          </label> 
+          <label class="radio-inline" for="players_number-3">
+            <input type="radio" name="players_number" id="players_number-3" value="64">
+            64
+          </label>
+        </div>
+      </div>
+      <div class="form-group">
+          <label class="col-md-4 control-label" for="time">Termin turnieju</label>
+          <div class="col-md-4">
+            <div class="input-group">
+              <input id="time" name="time" class="form-control" placeholder="" type="text" required="">
+              <span class="input-group-addon glyphicon glyphicon-time"></span>
+            </div>
+          </div>
+      </div>
+
+      <script type="text/javascript">
+          $('#timepicker1').timepicker();
+      </script>
+
+      <!-- https://jdewit.github.io/bootstrap-timepicker/ -->
+      <!-- https://bootsnipp.com/forms -->
+      
+      <!-- Button (Double) -->
+      <div class="form-group">
+        <label class="col-md-4 control-label" for="button1id"></label>
+        <div class="col-md-8">
+          <button id="button1id" name="button1id" class="btn btn-success">Stwórz</button>
+          <button id="button2id" name="button2id" class="btn btn-danger">Anuluj</button>
+        </div>
+      </div>
+      
+      </fieldset>
+    </form>   
   </div>
-</div>
-<div class="container-fluid justify-content-center">
-        <table class="table table-hover table-custom col-md-6">
-          <tbody>
-            <tr>
-              <!-- gra -->
-              <td><input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"></td>
-            </tr>
-          </tbody>
-        </table>
 </div>
