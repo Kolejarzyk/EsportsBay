@@ -12,6 +12,8 @@ import { HomeComponent } from "./home/home.component";
 import { AuthGuard } from "./.guard/auth.guard";
 import { AddmatchComponent } from "./home/addmatch/addmatch.component";
 import { AddstreamComponent } from "./home/addstream/addstream.component";
+import { TournamentDetailsComponent } from "./tournament/tournament-details/tournament-details.component";
+import { TournamentManagmentComponent } from "./tournament/tournament-managment/tournament-managment.component";
 
 
 export let  routes:Routes = [
@@ -40,6 +42,14 @@ export let  routes:Routes = [
         {
             path: 'create-tournament',
             component: CreateTournamentComponent
+        },
+        {
+            path: 'tournament-details',
+            component: TournamentDetailsComponent
+        },
+        {
+            path: 'tournament-managment',
+            component: TournamentManagmentComponent
         },
         {
            path: 'homes',

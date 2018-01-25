@@ -11,3 +11,7 @@
 {
     border: 1px solid #e9ecef;
 }
+select.form-control {
+    padding-top: 0;
+    padding-bottom: 0;
+}
