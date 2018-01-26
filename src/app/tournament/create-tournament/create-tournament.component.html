@@ -1,81 +1,58 @@
 <div class="py-5">
   <div class="container-fluid">
-    <form class="form-horizontal">
+    <form class="form-horizontal" name="form" (ngSubmit)="f.form.valid && create_tournament()" #f="ngForm" novalidate>
       <fieldset>
       
+        <!-- endOfEvent, Game, NumberOfParticipants, StartOfEvent -->
       <!-- Select Basic -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="map">Wybierz mapę</label>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !Game.valid }">
+        <label class="col-md-4 control-label" for="game">Wybierz grę</label>
         <div class="col-md-4">
-          <select id="map" name="map" class="form-control">
-            <option value="summoners_rift">Summoners Rift</option>
-            <option value="aram">ARAM</option>
-            <option value="twisted_treeline">Twisted Treeline</option>
+          <select id="Game" name="Game" class="form-control" [(ngModel)]="model.Game" #Game="ngModel">
+            <option value="League of Legends">League of Legends</option>
+            <option value="Counter Strike Global Offensive">Counter Strike Global Offensive</option>
+            <option value="Dota 2">Dota 2</option>
           </select>
         </div>
       </div>
-      
-      <!-- Select Basic -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="format">Format rozgrywki</label>
+         <!-- endOfEvent, Game, NumberOfParticipants, StartOfEvent -->
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !StartOfEvent.valid}">
+        <label class="col-md-4 control-label" for="StartOfEvent">Start eventu</label>
         <div class="col-md-4">
-          <select id="format" name="format" class="form-control">
-            <option value="1">Best of 1</option>
-            <option value="3">Best of 3</option>
-            <option value="5">Best of 5</option>
-          </select>
+          <input class="form-control" type="datetime-local"  name="StartOfEvent" [(ngModel)]="model.StartOfEvent" #StartOfEvent="ngModel" required />
+          <div *ngIf="f.submitted && !StartOfEvent.valid" class="help-block">date is required</div>
         </div>
       </div>
-      
-      <!-- Select Basic -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="type">Typ rogrywki</label>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !endOfEvent.valid}">
+        <label class="col-md-4 control-label" for="endOfEvent">Start eventu</label>
         <div class="col-md-4">
-          <select id="type" name="type" class="form-control">
-            <option value="1v1">1v1</option>
-            <option value="2v2">2v2</option>
-            <option value="3v3">3v3</option>
-            <option value="4v4">4v4</option>
-            <option value="5v5">5v5</option>
-          </select>
+          <input class="form-control" type="datetime-local"  name="endOfEvent" [(ngModel)]="model.endOfEvent" #endOfEvent="ngModel" required />
+          <div *ngIf="f.submitted && !endOfEvent.valid" class="help-block">date is required</div>
         </div>
-      </div>
-      
+      </div>     
+      <!-- endOfEvent, Game, NumberOfParticipants, StartOfEvent -->
       <!-- Multiple Radios (inline) -->
-      <div class="form-group">
-        <label class="col-md-4 control-label" for="players_number">Liczba graczy/drużyn</label>
+      <div class="form-group" [ngClass]="{ 'has-error': f.submitted && !NumberOfParticipants.valid}">
+        <label class="col-md-4 control-label" for="NumberOfParticipants">Liczba graczy/drużyn</label>
         <div class="col-md-4"> 
-          <label class="radio-inline" for="players_number-0">
-            <input type="radio" name="players_number" id="players_number-0" value="8" checked="checked">
+          <label class="radio-inline" for="NumberOfParticipants-0">
+            <input type="radio" name="NumberOfParticipants" id="NumberOfParticipants-0" value="8" checked="checked" [(ngModel)]="model.NumberOfParticipants" #NumberOfParticipants="ngModel">
             8
           </label> 
-          <label class="radio-inline" for="players_number-1">
-            <input type="radio" name="players_number" id="players_number-1" value="16">
+          <label class="radio-inline" for="NumberOfParticipants-1">
+            <input type="radio" name="NumberOfParticipants" id="NumberOfParticipants-1" value="16">
             16
           </label> 
-          <label class="radio-inline" for="players_number-2">
-            <input type="radio" name="players_number" id="players_number-2" value="32">
+          <label class="radio-inline" for="NumberOfParticipants-2">
+            <input type="radio" name="NumberOfParticipants" id="NumberOfParticipants-2" value="32">
             32
           </label> 
-          <label class="radio-inline" for="players_number-3">
-            <input type="radio" name="players_number" id="players_number-3" value="64">
+          <label class="radio-inline" for="NumberOfParticipants-3">
+            <input type="radio" name="NumberOfParticipants" id="NumberOfParticipants-3" value="64">
             64
           </label>
         </div>
       </div>
-      <div class="form-group">
-          <label class="col-md-4 control-label" for="time">Termin turnieju</label>
-          <div class="col-md-4">
-            <div class="input-group">
-              <input id="time" name="time" class="form-control" placeholder="" type="text" required="">
-              <span class="input-group-addon glyphicon glyphicon-time"></span>
-            </div>
-          </div>
-      </div>
-
-      <script type="text/javascript">
-          $('#timepicker1').timepicker();
-      </script>
 
       <!-- https://jdewit.github.io/bootstrap-timepicker/ -->
       <!-- https://bootsnipp.com/forms -->
@@ -84,7 +61,8 @@
       <div class="form-group">
         <label class="col-md-4 control-label" for="button1id"></label>
         <div class="col-md-8">
-          <button id="button1id" name="button1id" class="btn btn-success">Stwórz</button>
+          <button [disabled]="loading" id="button1id" name="button1id" class="btn btn-success">Stwórz</button>
+          <img *ngIf="loading" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
           <button id="button2id" name="button2id" class="btn btn-danger">Anuluj</button>
         </div>
       </div>
